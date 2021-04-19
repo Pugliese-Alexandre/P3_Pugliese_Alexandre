@@ -24,6 +24,7 @@
         border-radius: 2rem;
         object-fit: cover;
         background-color: white;  
+        position: relative;
     }
     .restaurant__Picture {
         width: 100%;
@@ -38,3 +39,14 @@
    }
 }
 
+.restaurant__new {
+    font-weight: 700;
+    background-color: $couleur-bouton-new ;
+    width: 8rem;
+    color: green;
+    font-size: 2rem;
+    padding: 1rem;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
