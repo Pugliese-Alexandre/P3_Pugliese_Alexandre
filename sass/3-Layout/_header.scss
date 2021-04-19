@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0rem 1.5rem 0rem;
+    .logo {
+        width: 25rem;
+    }
+}
+
+
+
+// Section Booking - Page d'accueil 
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    background-color: $lightgrey;
+    padding: 2rem 0rem 2rem 0rem;
+    box-shadow: 0rem 0rem 0rem 1px;
+
+@include heading-shadow 
+}
+
+.booking__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $lightgrey;
+    padding: 2.5rem 0rem 7rem 0rem;
+}
+
+.booking__title {
+    display: flex;
+    text-align-last: center;
+    margin: 0;
+    width: 60%;
+}
+
+.booking__p {
+    display: flex;
+    width: 76%;
+    text-align-last: center;
+}

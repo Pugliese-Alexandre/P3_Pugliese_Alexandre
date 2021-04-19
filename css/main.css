@@ -1,6 +1,250 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
-h1 {
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.footer__title {
   font-family: "Shrikhand";
+}
+
+h1,
+h2,
+.menuNav__title {
+  font-family: "Roboto";
+  font-weight: 900;
+}
+
+.localisation {
+  font-size: 34px;
+}
+
+.booking__title {
+  font-size: 60px;
+}
+
+.booking__p {
+  font-size: 43px;
+}
+
+h2 {
+  font-size: 3.69rem;
+}
+
+.menuChoice__title {
+  font-size: 3.69rem;
+}
+
+.menuChoice__title-bold {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+.menuChoice__title-bold {
+  font-size: 2.5rem;
+}
+
+.menuChoice__city {
+  font-size: 2.3rem;
+}
+
+.footer__title {
+  font-size: 2rem;
+}
+
+.footer__Link {
+  font-size: 2rem;
+}
+
+.footer__Contact {
+  font-size: 2rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0rem 1.5rem 0rem;
+}
+header .logo {
+  width: 25rem;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  background-color: #EDEDED;
+  padding: 2rem 0rem 2rem 0rem;
+  box-shadow: 0rem 0rem 0rem 1px;
+  background-color: #e0e0e0;
+}
+
+.booking__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #EDEDED;
+  padding: 2.5rem 0rem 7rem 0rem;
+}
+
+.booking__title {
+  display: flex;
+  text-align-last: center;
+  margin: 0;
+  width: 60%;
+}
+
+.booking__p {
+  display: flex;
+  width: 76%;
+  text-align-last: center;
+}
+
+.menuNav {
+  padding-top: 3rem;
+  margin-left: 3rem;
+  margin-bottom: 6rem;
+}
+.menuNav h2 {
+  display: flex;
+}
+.menuNav .menuNav__Btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.menuNav .menuNav__Btn-number {
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  border: none;
+  position: absolute;
+  left: -17px;
+}
+
+.menuChoice {
+  padding-top: 1.5rem;
+  padding-bottom: 6rem;
+  background-color: #EDEDED;
+}
+.menuChoice .menuChoice__title {
+  display: flex;
+  margin-left: 3rem;
+}
+.menuChoice .menuChoice__restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurant {
+  object-fit: cover;
+}
+.restaurant .restaurant__Feed {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 500px;
+  margin-left: 3rem;
+  border-radius: 2rem;
+  object-fit: cover;
+  background-color: white;
+}
+.restaurant .restaurant__Picture {
+  width: 100%;
+  height: 72%;
+  object-fit: cover;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+.restaurant .restaurant__Text {
+  padding-left: 2rem;
+  padding-top: 1.5rem;
+  position: relative;
+}
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  background-color: #332F2E;
+}
+footer .footer__title {
+  margin-left: 3rem;
+  font-weight: 400;
+  color: white;
+}
+footer .footer__Link {
+  display: flex;
+  margin-left: 3rem;
+  text-decoration: none;
+  color: white;
+}
+footer .footer__Contact {
+  margin-left: 3rem;
+  text-decoration: none;
+  color: white;
+}
+
+.booking__button {
+  display: inline-block;
+  width: 33rem;
+  height: 5rem;
+  background: linear-gradient(354deg, #9356dc 20%, #ff79da 100%);
+  color: white;
+  padding: 1rem;
+  font-size: 2.4rem;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 3rem;
+  margin-top: 1.5rem;
+}
+
+.menuNav__button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 7rem;
+  font-weight: 700;
+  width: 43rem;
+  height: 10rem;
+  font-size: 2rem;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  border: none;
+  position: relative;
+}
+
+#localisation__icone {
+  padding-right: 2rem;
+}
+
+#menuNav__icone1 {
+  padding-right: 2rem;
+}
+
+#menuNav__icone2 {
+  padding-right: 2rem;
+  color: #9356DC;
+}
+
+#footer__icone-utensils {
+  padding-right: 2.8rem;
+}
+
+#footer__icone-handshake {
+  padding-right: 2rem;
+}
+
+#menuChoice__icone-love {
+  font-size: 3rem;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */

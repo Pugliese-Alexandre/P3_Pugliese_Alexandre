@@ -3,75 +3,94 @@
 
 <head>
     <link rel="stylesheet" href="css/main.css" />
+    <script src="https://kit.fontawesome.com/0c2a8c50d5.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>ohmyfood</title>
 </head>
 
 <body>
     <div class="conteneur">
+        <!-- Header -->
         <header>
-            <!-- Header -->
             <img class="logo" src="public/img/ohmyfood.png" alt="logo ohmyfood">
-            <div class="localisation">Paris, Belleville</div>
-            <section class="booking">
+        </header>
+        <!-- Section Booking -->
+        <section class="booking">
+            <div class="localisation"><i class="fas fa-map-marker-alt" id="localisation__icone"></i>Paris, Belleville
+            </div>
+            <div class="booking__container">
                 <h1 class="booking__title">Réservez le menu qui vous convient</h1>
                 <p class="booking__p"> Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button class="booking__button">Explorer nos restaurants</button>
-            </section>
-        </header>
-        <!-- Fonctionnement -->
-        <section class="menuNav">
-            <h2>Fonctionnement</h2>
-            <button class="menuNav__button">Choississez un restaurant</button>
-            <button class="menuNav__button">Composez votre menu</button>
-            <button class="menuNav__button menuNav__button-taste">Dégustez au restaurant</button>
-        </section>
-        <!-- Restaurants -->
-        <section class="menuChoice">
-            <h2 class="menuChoice__restaurants-title">Restaurants</h2>
-            <div class="menuChoice__restaurants">
-                <figure>
-                    <img src="" alt="">
-                    <figcaption>
-                        <div class="title bold">La palette du goût</div>
-                        <div class="city">Ménilmontant</div>
-                    </figcaption>
-                </figure>
-
-                <figure>
-                    <img src="" alt="">
-                    <figcaption>
-                        <div class="title bold">La note enchantée</div>
-                        <div class="city">Charonne</div>
-                    </figcaption>
-                </figure>
-
-                <figure>
-                    <img src="" alt="">
-                    <figcaption>
-                        <div class="title bold">À la francaise</div>
-                        <div class="city">Cité Rouge</div>
-                    </figcaption>
-                </figure>
-
-                <figure>
-                    <img src="" alt="">
-                    <figcaption>
-                        <div class="title bold">Le délice des sens</div>
-                        <div class="city">Folie-Méricourt</div>
-                    </figcaption>
-                </figure>
+                <button class="booking__button" href="#">Explorer nos restaurants</button>
             </div>
         </section>
+        <!-- Fonctionnement -->
+        <article class="menuNav">
+            <h2 class="menuNav__title">Fonctionnement</h2>
+            <div class="menuNav__Btn">
+                <button class="menuNav__button"><span class="menuNav__Btn-number">1</span><i class="fas fa-mobile-alt"
+                        id="menuNav__icone1"></i>Choississez un
+                    restaurant</button>
+                <button class="menuNav__button"><span class="menuNav__Btn-number">2</span><i class="fas fa-list-ul"
+                        id="menuNav__icone1"></i>Composez votre
+                    menu</button>
+                <button class="menuNav__button menuNav__button-taste"><span class="menuNav__Btn-number">3</span><i
+                        class="fas fa-store" id="menuNav__icone2"></i>Dégustez au restaurant</button>
+            </div>
+        </article>
+        <!-- Restaurants -->
+        <article class="menuChoice">
+            <h2 class="menuChoice__title">Restaurants</h2>
+            <div class="menuChoice__restaurants">
+                <div class="restaurant">
+                    <figure class="restaurant__Feed">
+                        <img class="restaurant__Picture" src="public/img/Lapalettedugoût.jpg" alt="Photo Restaurant 1">
+                        <figcaption class="restaurant__Text">
+                            <div class="menuChoice__title-bold">La palette du goût</div>
+                            <div class="menuChoice__city">Ménilmontant</div>
+                            <i class="far fa-heart" id="menuChoice__icone-love"></i>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="restaurant">
+                    <figure class="restaurant__Feed">
+                        <img class="restaurant__Picture" src="public/img/Lanoteenchantée.jpg" alt="Photo Restaurant 2">
+                        <figcaption class="restaurant__Text">
+                            <div class="menuChoice__title-bold">La note enchantée</div>
+                            <div class="menuChoice__city">Charonne</div>
+                            <i class="far fa-heart" id="menuChoice__icone-love"></i>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="restaurant">
+                    <figure class="restaurant__Feed">
+                        <img class="restaurant__Picture" src="public/img/AlaFrancaise.jpg" alt="Photo Restaurant 3">
+                        <figcaption class="restaurant__Text">
+                            <div class="menuChoice__title-bold">À la francaise</div>
+                            <div class="menuChoice__city">Cité Rouge</div>
+                            <i class="far fa-heart" id="menuChoice__icone-love"></i>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="restaurant">
+                    <figure class="restaurant__Feed">
+                        <img class="restaurant__Picture" src="public/img/Ledélicedessens.jpg" alt="Photo Restaurant 4">
+                        <figcaption class="restaurant__Text">
+                            <div class="menuChoice__title-bold">Le délice des sens</div>
+                            <div class="menuChoice__city">Folie-Méricourt</div>
+                            <i class="far fa-heart" id="menuChoice__icone-love"></i>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </article>
         <!-- Footer -->
         <footer>
-            <div>
-                <img class="mini-logo" src="public/img/ohmyfood.png" alt="mini-logo ohmyfood">
-            </div>
-            <a href="#" class="footerLink">Proposer un restaurant</a>
-            <a href="#" class="footerLink">Devenir partenaire</a>
-            <a href="#" class="footerLink">Mentions légales</a>
-            <a href="#" class="contact">Contact</a>
+            <h4 class="footer__title">ohmyfood</h4>
+            <a href="#" class="footer__Link"><i class="fas fa-utensils" id="footer__icone-utensils"></i>Proposer un restaurant</a>
+            <a href="#" class="footer__Link"><i class="fas fa-handshake" id="footer__icone-handshake"></i>Devenir partenaire</a>
+            <a href="#" class="footer__Link">Mentions légales</a>
+            <a href="#" class="footer__Contact">Contact</a>
         </footer>
     </div>
 </body>

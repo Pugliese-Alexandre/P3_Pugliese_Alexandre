@@ -1,0 +1,40 @@
+.menuChoice {
+    padding-top: 1.5rem;
+    padding-bottom: 6rem;
+    background-color: #EDEDED;  
+    .menuChoice__title {
+        display: flex;
+        margin-left: 3rem;
+    }
+    .menuChoice__restaurants {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.restaurant {
+        object-fit: cover;
+    .restaurant__Feed {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 500px;
+        margin-left: 3rem;
+        border-radius: 2rem;
+        object-fit: cover;
+        background-color: white;  
+    }
+    .restaurant__Picture {
+        width: 100%;
+        height: 72%;
+        object-fit: cover;
+        border-radius: 2rem 2rem 0rem 0rem;
+    }
+    .restaurant__Text {
+        padding-left: 2rem;
+        padding-top: 1.5rem;
+        position: relative;
+   }
+}
+

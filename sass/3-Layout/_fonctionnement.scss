@@ -1,0 +1,22 @@
+.menuNav {
+    padding-top: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 6rem;
+    h2 {
+        display: flex;
+    }
+    .menuNav__Btn {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menuNav__Btn-number {
+        color: white;     
+        padding:10px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        border:none;
+        position: absolute;
+        left: -17px;
+    }
+}
