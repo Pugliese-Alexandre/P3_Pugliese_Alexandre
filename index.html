@@ -22,16 +22,16 @@
             <div class="booking__container">
                 <h1 class="booking__title">Réservez le menu qui vous convient</h1>
                 <p class="booking__p"> Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button class="booking__button" href="#">Explorer nos restaurants</button>
+                <a href="#ancre__restaurant"><button class="booking__button">Explorer nos restaurants</button></a>
             </div>
         </section>
         <!-- Fonctionnement -->
         <article class="menuNav">
             <h2 class="menuNav__title">Fonctionnement</h2>
             <div class="menuNav__Btn">
-                <button class="menuNav__button"><span class="menuNav__Btn-number">1</span><i class="fas fa-mobile-alt"
+                <a href="#ancre__restaurant"><button class="menuNav__button" ><span class="menuNav__Btn-number">1</span><i class="fas fa-mobile-alt"
                         id="menuNav__icone1"></i>Choississez un
-                    restaurant</button>
+                    restaurant</button></a>
                 <button class="menuNav__button"><span class="menuNav__Btn-number">2</span><i class="fas fa-list-ul"
                         id="menuNav__icone1"></i>Composez votre
                     menu</button>
@@ -40,12 +40,12 @@
             </div>
         </article>
         <!-- Restaurants -->
-        <article class="menuChoice">
+        <article class="menuChoice" id="ancre__restaurant">
             <h2 class="menuChoice__title">Restaurants</h2>
             <div class="menuChoice__restaurants">
-                <div class="restaurant">
-                    <figure class="restaurant__Feed">
-                        <img class="restaurant__Picture" src="public/img/Lapalettedugoût.jpg" alt="Photo Restaurant 1">
+              <a href="html/lapalettedugout.html"> <div class="restaurant">
+                     <figure class="restaurant__Feed">
+                        <img class="restaurant__Picture" src="public/img/Lapalettedugoût.jpg" alt="Photo Restaurant : La palette du goût">
                         <span class="restaurant__new">Nouveau</span>
                         <figcaption class="restaurant__Text">
                             <div class="menuChoice__title-bold">La palette du goût</div>
@@ -53,10 +53,10 @@
                             <i class="far fa-heart" id="menuChoice__icone-love"></i>
                         </figcaption>
                     </figure>
-                </div>
-                <div class="restaurant">
+                </div></a>
+                <a href="html/lanoteenchantée.html"><div class="restaurant">
                     <figure class="restaurant__Feed">
-                        <img class="restaurant__Picture" src="public/img/Lanoteenchantée.jpg" alt="Photo Restaurant 2">
+                        <img class="restaurant__Picture" src="public/img/Lanoteenchantée.jpg" alt="Photo Restaurant : La note enchantée">
                         <span class="restaurant__new">Nouveau</span>
                         <figcaption class="restaurant__Text">
                             <div class="menuChoice__title-bold">La note enchantée</div>
@@ -64,27 +64,27 @@
                             <i class="far fa-heart" id="menuChoice__icone-love"></i>
                         </figcaption>
                     </figure>
-                </div>
-                <div class="restaurant">
+                </div></a>
+                <a href="html/alafrancaise.html"><div class="restaurant">
                     <figure class="restaurant__Feed">
-                        <img class="restaurant__Picture" src="public/img/AlaFrancaise.jpg" alt="Photo Restaurant 3">
+                        <img class="restaurant__Picture" src="public/img/AlaFrancaise.jpg" alt="Photo Restaurant : À la francaise">
                         <figcaption class="restaurant__Text">
                             <div class="menuChoice__title-bold">À la francaise</div>
                             <div class="menuChoice__city">Cité Rouge</div>
                             <i class="far fa-heart" id="menuChoice__icone-love"></i>
                         </figcaption>
                     </figure>
-                </div>
-                <div class="restaurant">
+                </div></a>
+               <a href="html/ledélicedessens.html"><div class="restaurant">
                     <figure class="restaurant__Feed">
-                        <img class="restaurant__Picture" src="public/img/Ledélicedessens.jpg" alt="Photo Restaurant 4">
+                        <img class="restaurant__Picture" src="public/img/Ledélicedessens.jpg" alt="Photo Restaurant : Le délice des sens">
                         <figcaption class="restaurant__Text">
                             <div class="menuChoice__title-bold">Le délice des sens</div>
                             <div class="menuChoice__city">Folie-Méricourt</div>
                             <i class="far fa-heart" id="menuChoice__icone-love"></i>
                         </figcaption>
                     </figure>
-                </div>
+                </div></a> 
             </div>
         </article>
         <!-- Footer -->
