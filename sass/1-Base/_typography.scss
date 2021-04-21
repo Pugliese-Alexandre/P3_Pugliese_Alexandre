@@ -9,36 +9,12 @@ body {
     font-family: "Shrikhand";
 }
 
-h1,
-h2,
-.menuNav__title {
+.booking__title,
+.menuNav__title,
+.menuNav__title,
+.menuChoice__title {
     font-family: "Roboto";
     font-weight: 900;
-}
-
-// Header 
-
-.localisation {
-    font-size: 34px;
-}
-
-.booking__title {
-    font-size: 60px;
-}
-
-.booking__p {
-    font-size: 43px;
-}
-
-// Fonctionnement 
-
-h2 {
-    font-size: 3.69rem;
-}
-
-// Restaurants 
-.menuChoice__title {
-    font-size: 3.69rem;
 }
 
 // Restaurant : figcaption 
@@ -47,24 +23,49 @@ h2 {
     font-weight: 700;
 }
 
-.menuChoice__title-bold {
-    font-size: 2.5rem;
-}    
-
-.menuChoice__city {
-        font-size: 2.3rem;
+// Pages Secondaire 
+.main__title {
+    font-family: "Shrikhand";
+    font-weight: 400;
 }
 
-// Footer 
-
-.footer__title {
-    font-size: 2rem;
+.plats__title, .entrées__title, .desserts__title {
+    font-family: "Roboto";
+    font-weight: 400;
 }
 
-.footer__Link {
-    font-size: 2rem;
+.entrées__name {
+    font-family: "Roboto";
+    font-weight: 700;
 }
 
-.footer__Contact {
-    font-size: 2rem;
+.entrées__price {
+    font-family: "Roboto";
+    font-weight: 700;
 }
+
+.plats__name {
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+.plats__price {
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+.desserts__name {
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+.desserts__price {
+    font-family: "Roboto";
+    font-weight: 700;
+}
+
+.desserts__description,.plats__description, .entrées__description {
+    font-family: "Roboto";
+    font-weight: 400;
+}
+

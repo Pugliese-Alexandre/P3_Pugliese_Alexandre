@@ -1,52 +1,68 @@
 .menuChoice {
     padding-top: 1.5rem;
-    padding-bottom: 6rem;
-    background-color: #EDEDED;  
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #EDEDED;
+
     .menuChoice__title {
         display: flex;
-        margin-left: 3rem;
+        margin-left: 1rem;
+        font-size: 1.5rem;
     }
+
     .menuChoice__restaurants {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+
+    .menuChoice__title-bold {
+        font-size: 1rem;
+    }
+    
+    .menuChoice__city {
+        font-size: 1rem;
+}
+
 }
 
 .restaurant {
-        object-fit: cover;
+    object-fit: cover;
+    padding-bottom: 1rem;
+
     .restaurant__Feed {
         display: flex;
         flex-direction: column;
-        width: 90%;
-        height: 500px;
-        margin-left: 3rem;
         border-radius: 2rem;
         object-fit: cover;
-        background-color: white;  
-        position: relative;
+        background-color: white;
+        position: relative;    
+        margin: 0;
     }
+
     .restaurant__Picture {
-        width: 100%;
-        height: 72%;
+        height: 12rem;
         object-fit: cover;
         border-radius: 2rem 2rem 0rem 0rem;
     }
+
     .restaurant__Text {
-        padding-left: 2rem;
-        padding-top: 1.5rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         position: relative;
-   }
+    }
 }
 
 .restaurant__new {
     font-weight: 700;
-    background-color: $couleur-bouton-new ;
-    width: 8rem;
-    color: green;
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 1rem;
+    background-color: #A9ECD7;
+    width: 4rem;
+    color: #088A68;
+    padding: 0.5rem;
     position: absolute;
-    right: 2rem;
-    top: 2rem;
+    right: 1rem;
+    top: 1rem;
 }

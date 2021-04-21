@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto";
@@ -8,31 +9,12 @@ body {
   font-family: "Shrikhand";
 }
 
-h1,
-h2,
-.menuNav__title {
+.booking__title,
+.menuNav__title,
+.menuNav__title,
+.menuChoice__title {
   font-family: "Roboto";
   font-weight: 900;
-}
-
-.localisation {
-  font-size: 34px;
-}
-
-.booking__title {
-  font-size: 60px;
-}
-
-.booking__p {
-  font-size: 43px;
-}
-
-h2 {
-  font-size: 3.69rem;
-}
-
-.menuChoice__title {
-  font-size: 3.69rem;
 }
 
 .menuChoice__title-bold {
@@ -40,24 +22,49 @@ h2 {
   font-weight: 700;
 }
 
-.menuChoice__title-bold {
-  font-size: 2.5rem;
+.main__title {
+  font-family: "Shrikhand";
+  font-weight: 400;
 }
 
-.menuChoice__city {
-  font-size: 2.3rem;
+.plats__title, .entrées__title, .desserts__title {
+  font-family: "Roboto";
+  font-weight: 400;
 }
 
-.footer__title {
-  font-size: 2rem;
+.entrées__name {
+  font-family: "Roboto";
+  font-weight: 700;
 }
 
-.footer__Link {
-  font-size: 2rem;
+.entrées__price {
+  font-family: "Roboto";
+  font-weight: 700;
 }
 
-.footer__Contact {
-  font-size: 2rem;
+.plats__name {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+.plats__price {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+.desserts__name {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+.desserts__price {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+.desserts__description, .plats__description, .entrées__description {
+  font-family: "Roboto";
+  font-weight: 400;
 }
 
 body {
@@ -71,14 +78,16 @@ header {
   margin: 2.5rem 0rem 1.5rem 0rem;
 }
 header .logo {
-  width: 25rem;
+  width: 10rem;
+  padding-left: 2rem;
 }
 
 .localisation {
   display: flex;
   justify-content: center;
+  font-size: 1rem;
   background-color: #EDEDED;
-  padding: 2rem 0rem 2rem 0rem;
+  padding: 1rem 0rem 1rem 0rem;
   box-shadow: 0rem 0rem 0rem 1px grey;
   background-color: #e0e0e0;
 }
@@ -88,29 +97,56 @@ header .logo {
   align-items: center;
   flex-direction: column;
   background-color: #EDEDED;
-  padding: 2.5rem 0rem 7rem 0rem;
+  padding: 2.5rem 0rem 4rem 0rem;
 }
 
 .booking__title {
   display: flex;
   text-align-last: center;
   margin: 0;
-  width: 60%;
+  font-size: 1.5rem;
+  width: 15rem;
 }
 
 .booking__p {
   display: flex;
-  width: 76%;
   text-align-last: center;
+  margin: 0;
+  font-size: 1rem;
+  width: 280px;
+  padding-top: 1rem;
+}
+
+.header__pageSecondaire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  position: relative;
+}
+
+.logo__title {
+  width: 200px;
+  margin: 1rem;
+}
+
+.lapalettedugout__logo {
+  width: 400px;
+}
+
+.main__title {
+  display: flex;
+  font-size: 2rem;
 }
 
 .menuNav {
-  padding-top: 3rem;
-  margin-left: 3rem;
-  margin-bottom: 6rem;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
 }
-.menuNav h2 {
+.menuNav .menuNav__title {
   display: flex;
+  font-size: 1.5rem;
+  margin-left: 1rem;
 }
 .menuNav .menuNav__Btn {
   display: flex;
@@ -124,60 +160,68 @@ header .logo {
   background-color: #9356DC;
   border: none;
   position: absolute;
-  left: -17px;
+  left: -11px;
 }
 
 .menuChoice {
   padding-top: 1.5rem;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: #EDEDED;
 }
 .menuChoice .menuChoice__title {
   display: flex;
-  margin-left: 3rem;
+  margin-left: 1rem;
+  font-size: 1.5rem;
 }
 .menuChoice .menuChoice__restaurants {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+.menuChoice .menuChoice__title-bold {
+  font-size: 1rem;
+}
+.menuChoice .menuChoice__city {
+  font-size: 1rem;
+}
 
 .restaurant {
   object-fit: cover;
+  padding-bottom: 1rem;
 }
 .restaurant .restaurant__Feed {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  height: 500px;
-  margin-left: 3rem;
   border-radius: 2rem;
   object-fit: cover;
   background-color: white;
   position: relative;
+  margin: 0;
 }
 .restaurant .restaurant__Picture {
-  width: 100%;
-  height: 72%;
+  height: 12rem;
   object-fit: cover;
   border-radius: 2rem 2rem 0rem 0rem;
 }
 .restaurant .restaurant__Text {
-  padding-left: 2rem;
-  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   position: relative;
 }
 
 .restaurant__new {
   font-weight: 700;
+  font-size: 1rem;
   background-color: #A9ECD7;
-  width: 8rem;
-  color: green;
-  font-size: 2rem;
-  padding: 1rem;
+  width: 4rem;
+  color: #088A68;
+  padding: 0.5rem;
   position: absolute;
-  right: 2rem;
-  top: 2rem;
+  right: 1rem;
+  top: 1rem;
 }
 
 footer {
@@ -189,75 +233,203 @@ footer .footer__title {
   margin-left: 3rem;
   font-weight: 400;
   color: white;
+  font-size: 1.5rem;
+  margin: 0;
+  padding-left: 3rem;
+  padding-bottom: 1rem;
 }
 footer .footer__Link {
   display: flex;
   margin-left: 3rem;
   text-decoration: none;
   color: white;
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
 }
 footer .footer__Contact {
   margin-left: 3rem;
   text-decoration: none;
   color: white;
+  font-size: 1rem;
+}
+
+.footer__title {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  background-color: #EDEDED;
+  position: relative;
+  border-radius: 3rem 3rem 0 0;
+}
+
+.entrées__1, .entrées__2, .entrées__3 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 0rem;
+  position: relative;
+  color: black;
+}
+
+.entrées__price {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.plats__1, .plats__2, .plats__3 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 0rem;
+  position: relative;
+  color: black;
+}
+
+.plats__price {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.desserts__1, .desserts__2, .desserts__3 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 0rem;
+  position: relative;
+  color: black;
+}
+
+.desserts__price {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.plats__title, .entrées__title, .desserts__title {
+  font-size: 1rem;
+}
+
+.entrées__name, .plats__name, .desserts__name {
+  margin: 0;
+}
+
+.desserts__description, .plats__description, .entrées__description {
+  margin: 0;
+}
+
+.entrées__price, .plats__price, .desserts__price {
+  margin: 0;
 }
 
 .booking__button {
   display: inline-block;
-  width: 33rem;
-  height: 5rem;
+  width: 12rem;
+  font-weight: 700;
+  height: 3rem;
   background: linear-gradient(354deg, #9356dc 20%, #ff79da 100%);
   color: white;
   padding: 1rem;
-  font-size: 2.4rem;
   text-align: center;
   text-decoration: none;
   border: none;
   border-radius: 3rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .menuNav__button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 7rem;
   font-weight: 700;
-  width: 43rem;
-  height: 10rem;
-  font-size: 2rem;
+  width: 23rem;
+  height: 5rem;
+  font-size: 1rem;
   border-radius: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border: none;
   position: relative;
 }
 
+.commander-Btn {
+  display: inline-block;
+  font-weight: 700;
+  width: 13rem;
+  background: linear-gradient(354deg, #9356dc 20%, #ff79da 100%);
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 3rem;
+  align-self: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
 #localisation__icone {
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 #menuNav__icone1 {
   padding-right: 2rem;
+  font-size: 1rem;
+  padding-left: 2rem;
+  color: #6E6E6E;
 }
 
 #menuNav__icone2 {
   padding-right: 2rem;
   color: #9356DC;
+  font-size: 1rem;
+  padding-left: 2rem;
 }
 
 #footer__icone-utensils {
-  padding-right: 2.8rem;
+  padding-right: 1.5rem;
 }
 
 #footer__icone-handshake {
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 #menuChoice__icone-love {
-  font-size: 3rem;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 1.6rem;
+  right: 3rem;
+}
+
+#arrow__back {
+  position: absolute;
+  top: 1.8rem;
+  left: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
+#main__icone-love {
+  font-size: 25px;
   position: absolute;
   top: 2rem;
-  right: 3rem;
+  right: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

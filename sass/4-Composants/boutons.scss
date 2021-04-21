@@ -2,17 +2,17 @@
 
 .booking__button {
     display: inline-block;
-    width: 33rem;
-    height: 5rem;
-    background: linear-gradient(354deg, rgba(147,86,220,1) 20%, rgba(255,121,218,1) 100%);
+    width: 12rem;
+    font-weight: 700;
+    height: 3rem;
+    background: linear-gradient(354deg, #9356dc 20%, #ff79da 100%);
     color: white;
     padding: 1rem;
-    font-size: 2.4rem;
     text-align: center;
     text-decoration: none;
     border: none;
     border-radius: 3rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 // Boutons : Fonctionnement : Header
@@ -21,13 +21,31 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 7rem;
     font-weight: 700;
-    width: 43rem;
-    height: 10rem;
-    font-size: 2rem;
+    width: 23rem;
+    height: 5rem;
+    font-size: 1rem;
     border-radius: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border: none;
     position: relative;
+}
+
+// Boutons : Page secondaire : Commander 
+
+.commander-Btn {
+    display: inline-block;
+    font-weight: 700;
+    width: 13rem;
+    background: linear-gradient(354deg, #9356dc 20%, #ff79da 100%);
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 3rem;
+    align-self: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }

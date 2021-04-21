@@ -1,0 +1,34 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    background-color: $lightgrey;
+    position: relative;
+    border-radius: 3rem 3rem 0 0;
+}
+
+
+// Entrée : Page Secondaire
+
+.entrées__1, .entrées__2, .entrées__3 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 1rem 1rem 0rem;
+    position: relative;
+    color: black;
+}
+
+.entrées__price {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+

@@ -1,0 +1,17 @@
+// Les 3 Menus : Page Secondaire
+
+.plats__title, .entrées__title, .desserts__title {
+    font-size: 1rem;
+}
+
+.entrées__name, .plats__name, .desserts__name {
+    margin: 0;
+}
+
+.desserts__description,.plats__description, .entrées__description {
+    margin: 0;
+}
+
+.entrées__price, .plats__price, .desserts__price {
+    margin: 0;
+}
