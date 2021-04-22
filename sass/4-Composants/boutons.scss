@@ -13,6 +13,7 @@
     border: none;
     border-radius: 3rem;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 // Boutons : Fonctionnement : Header
@@ -29,6 +30,8 @@
     margin-bottom: 1rem;
     border: none;
     position: relative;
+    cursor: pointer;
+    transition-duration: 0.3s;
 }
 
 // Boutons : Page secondaire : Commander 
@@ -48,4 +51,5 @@
     align-self: center;
     margin-top: 2rem;
     margin-bottom: 4rem;
+    cursor: pointer;
 }

@@ -44,6 +44,10 @@
     left: 2rem;
     text-decoration: none;
     color: black;
+    transition-duration: 0.1s;
+    &:hover {
+        transform: scale(1.25);
+    }
 }
 
 #main__icone-love {
@@ -52,3 +56,4 @@
     top: 2rem;
     right: 1rem;
 }
+

@@ -12,12 +12,20 @@
         justify-content: center;
     }
     .menuNav__Btn-number {
-        color: white;     
-        padding:10px;
+        color: white;
+        padding: 3px;
         border-radius: 50%;
-        background-color: $color-primary;
-        border:none;
+        background-color: #9356DC;
+        border: none;
         position: absolute;
-        left: -11px;
+        left: -7px;
     }
 }
+
+// Fonctionnement : Animation 
+.menuNav__button-taste:hover,
+.menuNav__button-make:hover,
+.menuNav__button-choose:hover {
+    transform: scale(1.02);
+}
+

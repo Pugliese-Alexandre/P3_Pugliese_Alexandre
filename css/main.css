@@ -131,7 +131,8 @@ header .logo {
 }
 
 .page__Secondaire-logo {
-  width: 400px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .main__title {
@@ -161,12 +162,18 @@ header .logo {
 }
 .menuNav .menuNav__Btn-number {
   color: white;
-  padding: 10px;
+  padding: 3px;
   border-radius: 50%;
   background-color: #9356DC;
   border: none;
   position: absolute;
-  left: -11px;
+  left: -7px;
+}
+
+.menuNav__button-taste:hover,
+.menuNav__button-make:hover,
+.menuNav__button-choose:hover {
+  transform: scale(1.02);
 }
 
 .menuChoice {
@@ -196,6 +203,7 @@ header .logo {
 .restaurant {
   object-fit: cover;
   padding-bottom: 1rem;
+  transition-duration: 0.2s;
 }
 .restaurant .restaurant__Feed {
   display: flex;
@@ -228,6 +236,13 @@ header .logo {
   position: absolute;
   right: 1rem;
   top: 1rem;
+}
+
+.menuchoice__restaurant-lapalettedugoût:hover,
+.menuchoice__restaurant-lanoteenchantée:hover,
+.menuchoice__restaurant-alaFrancaise:hover,
+.menuchoice__restaurant-ledélicedessens:hover {
+  transform: scale(1.02);
 }
 
 footer {
@@ -274,7 +289,8 @@ a {
   padding-left: 1rem;
   background-color: #EDEDED;
   position: relative;
-  border-radius: 3rem 3rem 0 0;
+  border-radius: 2rem 2rem 0 0;
+  top: -3rem;
 }
 
 .entrées__1, .entrées__2, .entrées__3, .entrées__4 {
@@ -357,6 +373,7 @@ a {
   border: none;
   border-radius: 3rem;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .menuNav__button {
@@ -371,6 +388,8 @@ a {
   margin-bottom: 1rem;
   border: none;
   position: relative;
+  cursor: pointer;
+  transition-duration: 0.3s;
 }
 
 .commander-Btn {
@@ -388,6 +407,7 @@ a {
   align-self: center;
   margin-top: 2rem;
   margin-bottom: 4rem;
+  cursor: pointer;
 }
 
 #localisation__icone {
@@ -429,6 +449,10 @@ a {
   left: 2rem;
   text-decoration: none;
   color: black;
+  transition-duration: 0.1s;
+}
+#arrow__back:hover {
+  transform: scale(1.25);
 }
 
 #main__icone-love {
