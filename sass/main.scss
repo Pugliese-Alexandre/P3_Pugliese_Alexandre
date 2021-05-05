@@ -5,6 +5,7 @@
 @import '2-Utils/_fonctions';
 @import '2-Utils/_mixins';
 @import '2-Utils/_variables';
+@import '2-Utils/_keyframes';
 
 // 3 - LAYOUT
 @import '3-Layout/_header';
@@ -12,13 +13,14 @@
 @import '3-Layout/_restaurants';
 @import '3-Layout/_footer';
 @import '3-Layout/_entrées';
+@import '3-Layout/_mediaQueries';
 @import '3-Layout/_plats';
 @import '3-Layout/_désserts';
 @import '3-Layout/_lestroismenu';
 
 // 4 - COMPOSANTS
-@import '4-Composants/boutons';
-@import '4-Composants/icones';
+@import '4-Composants/_boutons';
+@import '4-Composants/_icones';
 
 // 5 - PAGES
 

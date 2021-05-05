@@ -6,3 +6,14 @@ $color-tertiaire: #99E2D0; //Tertiaire
 $lightgrey: #EDEDED; //Gris Clair
 $black: #332F2E; //Noir
 $couleur-bouton-new : #A9ECD7 ; // Bouton nouveau
+
+$primary-gradient: linear-gradient(354deg, #9356dc 20%, #ff79da 100%);
+
+// Breakpoints Responsive 
+
+$breakpoints: (
+    tablet-up: 700px,
+    tablet-down: 900px,
+    desktop: 1200px,
+);
+

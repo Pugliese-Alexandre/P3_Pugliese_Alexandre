@@ -2,6 +2,7 @@
 
 .plats__title, .entrées__title, .desserts__title {
     font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .entrées__name, .plats__name, .desserts__name {
@@ -10,8 +11,43 @@
 
 .desserts__description,.plats__description, .entrées__description {
     margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: plats__description-hidden--inactive 400ms ease-out forwards;
 }
 
 .entrées__price, .plats__price, .desserts__price {
     margin: 0;
+}
+
+.menu__underline {
+    position: relative;
+    right: 0px;
+    top: -5px;
+    height: 3px;
+    width: 40px;
+    background-color: $color-tertiaire;
+}
+
+.scroll {
+    z-index: 0;
+    background-color: $color-tertiaire;
+    width: 48px;
+    height: 74px;
+    align-self: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 1rem 1rem 0;
+    &:hover {
+        background: $color-tertiaire;
+    }
+}
+
+.price {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 0px;
 }

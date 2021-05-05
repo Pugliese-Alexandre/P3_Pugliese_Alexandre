@@ -1,0 +1,99 @@
+// Icone : Section Booking
+#localisation__icone {
+    padding-right: 1rem;
+}
+
+
+// Icones : Fonctionnement 
+#menuNav__icone1 {
+    padding-right: 2rem;
+    font-size: 1rem;
+    padding-left: 2rem;
+    color: #6E6E6E;
+}
+
+#menuNav__icone2 {
+    padding-right: 2rem;
+    color: $color-primary;
+    font-size: 1rem;
+    padding-left: 2rem;
+}
+
+// Footers
+
+#footer__icone-utensils {
+    padding-right: 1.5rem;
+    @include responsive(tablet-up) {
+        padding-right: 0.5rem;
+    }
+}
+
+#footer__icone-handshake {
+    padding-right: 1rem;    
+    @include responsive(tablet-up) {
+        padding-right: 0.5rem;
+    }
+}
+
+// Icones : Restaurant : Coeur
+#menuChoice__icone-love {
+    font-size: 1.1rem;
+    position: absolute;
+    top: 1.6rem;
+    right: 3rem;
+
+    &:hover {
+        font-weight: 900;
+        animation: fill 0.3s ease-in-out;
+        opacity: 1;
+        background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+
+    }
+}
+
+
+// Icones : Page Secondaire : Coeur 
+
+#arrow__back {
+    position: absolute;
+    top: 1.8rem;
+    left: 2rem;
+    text-decoration: none;
+    color: black;
+    transition-duration: 0.1s;
+
+    &:hover {
+        transform: scale(1.25);
+    }
+}
+
+#main__icone-love {
+    font-size: 25px;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    &:hover {
+        font-weight: 900;
+        animation: fill 0.3s ease-in-out;
+        opacity: 1;
+        background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+}
+
+// Icones : Page Secondaire : Check
+
+#main__icone-check {
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    border: none;
+    cursor: pointer;
+}

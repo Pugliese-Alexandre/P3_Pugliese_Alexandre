@@ -67,6 +67,42 @@ body {
   font-weight: 400;
 }
 
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes plats__description-hidden {
+  from {
+    width: calc(100% - 50px);
+  }
+  to {
+    width: calc(100% - 100px);
+  }
+}
+@keyframes plats__description-hidden--inactive {
+  from {
+    width: calc(100% - 100px);
+  }
+  to {
+    width: calc(100% - 50px);
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -107,6 +143,11 @@ header .logo {
   font-size: 1.5rem;
   width: 15rem;
 }
+@media screen and (min-width: 500px) {
+  .booking__title {
+    width: unset;
+  }
+}
 
 .booking__p {
   display: flex;
@@ -133,6 +174,7 @@ header .logo {
 .page__Secondaire-logo {
   width: 100%;
   max-width: 100%;
+  object-fit: cover;
 }
 
 .main__title {
@@ -142,7 +184,7 @@ header .logo {
 
 .page__lanoteenchantée-logo {
   height: 16rem;
-  width: 400px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -155,10 +197,23 @@ header .logo {
   font-size: 1.5rem;
   margin-left: 1rem;
 }
+@media screen and (min-width: 500px) {
+  .menuNav .menuNav__title {
+    justify-content: center;
+    padding-bottom: 0.5rem;
+  }
+}
 .menuNav .menuNav__Btn {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .menuNav .menuNav__Btn {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
 }
 .menuNav .menuNav__Btn-number {
   color: white;
@@ -188,6 +243,12 @@ header .logo {
   margin-left: 1rem;
   font-size: 1.5rem;
 }
+@media screen and (min-width: 500px) {
+  .menuChoice .menuChoice__title {
+    justify-content: center;
+    padding-bottom: 0.5rem;
+  }
+}
 .menuChoice .menuChoice__restaurants {
   display: flex;
   flex-direction: column;
@@ -205,6 +266,11 @@ header .logo {
   padding-bottom: 1rem;
   transition-duration: 0.2s;
 }
+@media screen and (min-width: 1200px) {
+  .restaurant {
+    padding-bottom: 2rem;
+  }
+}
 .restaurant .restaurant__Feed {
   display: flex;
   flex-direction: column;
@@ -213,6 +279,24 @@ header .logo {
   background-color: white;
   position: relative;
   margin: 0;
+}
+@media screen and (min-width: 500px) {
+  .restaurant .restaurant__Feed {
+    margin: auto;
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .restaurant .restaurant__Feed {
+    margin: auto;
+    max-width: 800px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .restaurant .restaurant__Feed {
+    margin: auto;
+    max-width: 1000px;
+  }
 }
 .restaurant .restaurant__Picture {
   height: 12rem;
@@ -238,17 +322,17 @@ header .logo {
   top: 1rem;
 }
 
-.menuchoice__restaurant-lapalettedugoût:hover,
-.menuchoice__restaurant-lanoteenchantée:hover,
-.menuchoice__restaurant-alaFrancaise:hover,
-.menuchoice__restaurant-ledélicedessens:hover {
-  transform: scale(1.02);
-}
-
 footer {
   padding-top: 1rem;
   padding-bottom: 3rem;
   background-color: #332F2E;
+}
+@media screen and (min-width: 500px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 footer .footer__title {
   margin-left: 3rem;
@@ -259,6 +343,15 @@ footer .footer__title {
   padding-left: 3rem;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 500px) {
+  footer .footer__title {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
 footer .footer__Link {
   display: flex;
   margin-left: 3rem;
@@ -267,11 +360,36 @@ footer .footer__Link {
   font-size: 1rem;
   padding-bottom: 0.5rem;
 }
+@media screen and (min-width: 500px) {
+  footer .footer__Link {
+    margin-left: 0;
+  }
+}
 footer .footer__Contact {
   margin-left: 3rem;
   text-decoration: none;
   color: white;
   font-size: 1rem;
+}
+@media screen and (min-width: 500px) {
+  footer .footer__Contact {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .footer__content {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 900px) {
+  .footer__content {
+    display: flex;
+  }
 }
 
 .footer__title {
@@ -293,7 +411,10 @@ a {
   top: -3rem;
 }
 
-.entrées__1, .entrées__2, .entrées__3, .entrées__4 {
+.entrées__1,
+.entrées__2,
+.entrées__3,
+.entrées__4 {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -302,12 +423,22 @@ a {
   margin: 1rem 1rem 1rem 0rem;
   position: relative;
   color: black;
+  cursor: pointer;
 }
 
 .entrées__price {
+  background-color: white;
+  width: 48px;
+  height: 74px;
+  border-radius: 0 1rem 1rem 0;
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  right: 0rem;
+  bottom: 0rem;
+  z-index: 1;
+  transition: cubic-bezier(1, 1.01, 0.01, 0.01) 1s;
+}
+.entrées__price:hover {
+  transform: translateX(-100%);
 }
 
 .plats__1, .plats__2, .plats__3 {
@@ -319,12 +450,22 @@ a {
   margin: 1rem 1rem 1rem 0rem;
   position: relative;
   color: black;
+  cursor: pointer;
 }
 
 .plats__price {
+  background-color: white;
+  width: 48px;
+  height: 74px;
+  border-radius: 0 1rem 1rem 0;
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  right: 0rem;
+  bottom: 0rem;
+  z-index: 1;
+  transition: cubic-bezier(1, 1.01, 0.01, 0.01) 1s;
+}
+.plats__price:hover {
+  transform: translateX(-100%);
 }
 
 .desserts__1, .desserts__2, .desserts__3 {
@@ -336,16 +477,27 @@ a {
   margin: 1rem 1rem 1rem 0rem;
   position: relative;
   color: black;
+  cursor: pointer;
 }
 
 .desserts__price {
+  background-color: white;
+  width: 48px;
+  height: 74px;
+  border-radius: 0 1rem 1rem 0;
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  right: 0rem;
+  bottom: 0rem;
+  z-index: 1;
+  transition: cubic-bezier(1, 1.01, 0.01, 0.01) 1s;
+}
+.desserts__price:hover {
+  transform: translateX(-100%);
 }
 
 .plats__title, .entrées__title, .desserts__title {
   font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .entrées__name, .plats__name, .desserts__name {
@@ -354,10 +506,66 @@ a {
 
 .desserts__description, .plats__description, .entrées__description {
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: plats__description-hidden--inactive 400ms ease-out forwards;
 }
 
 .entrées__price, .plats__price, .desserts__price {
   margin: 0;
+}
+
+.menu__underline {
+  position: relative;
+  right: 0px;
+  top: -5px;
+  height: 3px;
+  width: 40px;
+  background-color: #99E2D0;
+}
+
+.scroll {
+  z-index: 0;
+  background-color: #99E2D0;
+  width: 48px;
+  height: 74px;
+  align-self: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 1rem 1rem 0;
+}
+.scroll:hover {
+  background: #99E2D0;
+}
+
+.price {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+}
+
+/* Loading Bouton*/
+.chargement {
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-top: 10px solid #FF79DA;
+  border-bottom: 10px solid #9356DC;
+  border-radius: 50%;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: spin 3s ease-in-out 0.1s forwards;
+  -moz-animation: spin 3s ease-in-out 0.1s forwards;
+  -o-animation: spin 3s ease-in-out 0.1s forwards;
+  animation: spin 3s ease-in-out 0.1s forwards;
+  z-index: 3;
 }
 
 .booking__button {
@@ -374,6 +582,11 @@ a {
   border-radius: 3rem;
   margin-top: 2rem;
   cursor: pointer;
+  transition-duration: 0.3s;
+}
+.booking__button:hover {
+  opacity: 0.85;
+  box-shadow: 3px 3px 10px black;
 }
 
 .menuNav__button {
@@ -409,6 +622,10 @@ a {
   margin-bottom: 4rem;
   cursor: pointer;
 }
+.commander-Btn:hover {
+  opacity: 0.85;
+  box-shadow: 3px 3px 10px black;
+}
 
 #localisation__icone {
   padding-right: 1rem;
@@ -431,9 +648,19 @@ a {
 #footer__icone-utensils {
   padding-right: 1.5rem;
 }
+@media screen and (min-width: 500px) {
+  #footer__icone-utensils {
+    padding-right: 0.5rem;
+  }
+}
 
 #footer__icone-handshake {
   padding-right: 1rem;
+}
+@media screen and (min-width: 500px) {
+  #footer__icone-handshake {
+    padding-right: 0.5rem;
+  }
 }
 
 #menuChoice__icone-love {
@@ -441,6 +668,15 @@ a {
   position: absolute;
   top: 1.6rem;
   right: 3rem;
+}
+#menuChoice__icone-love:hover {
+  font-weight: 900;
+  animation: fill 0.3s ease-in-out;
+  opacity: 1;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 #arrow__back {
@@ -460,6 +696,25 @@ a {
   position: absolute;
   top: 2rem;
   right: 1rem;
+}
+#main__icone-love:hover {
+  font-weight: 900;
+  animation: fill 0.3s ease-in-out;
+  opacity: 1;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+#main__icone-check {
+  display: flex;
+  color: white;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

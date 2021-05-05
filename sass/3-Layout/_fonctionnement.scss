@@ -1,16 +1,30 @@
 .menuNav {
     padding-top: 2rem;
     margin-bottom: 3rem;
+
     .menuNav__title {
         display: flex;
         font-size: 1.5rem;
         margin-left: 1rem;
+
+        @include responsive(tablet-up) {
+            justify-content: center;
+            padding-bottom: 0.5rem;
+        }
     }
+
     .menuNav__Btn {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-flow: column;
+        align-items: center;
+
+        @include responsive(desktop) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
     }
+
     .menuNav__Btn-number {
         color: white;
         padding: 3px;
@@ -28,4 +42,3 @@
 .menuNav__button-choose:hover {
     transform: scale(1.02);
 }
-

@@ -9,6 +9,10 @@
         display: flex;
         margin-left: 1rem;
         font-size: 1.5rem;
+        @include responsive(tablet-up) {
+            justify-content: center;
+            padding-bottom: 0.5rem;
+        }
     }
 
     .menuChoice__restaurants {
@@ -32,7 +36,9 @@
     object-fit: cover;
     padding-bottom: 1rem;
     transition-duration: 0.2s;
-
+    @include responsive(desktop) {
+    padding-bottom: 2rem;        
+    }
     .restaurant__Feed {
         display: flex;
         flex-direction: column;
@@ -41,6 +47,18 @@
         background-color: white;
         position: relative;
         margin: 0;
+        @include responsive(tablet-up) {
+            margin: auto;
+            max-width: 700px;
+        }
+        @include responsive(tablet-down) {
+            margin: auto;
+            max-width: 800px;
+        }
+        @include responsive(desktop) {
+            margin: auto;
+            max-width: 1000px;
+        }
     }
 
     .restaurant__Picture {
@@ -69,12 +87,3 @@
     top: 1rem;
 }
 
-// Animation : Restaurant 
-
-.menuchoice__restaurant-lapalettedugoût:hover,
-.menuchoice__restaurant-lanoteenchantée:hover,
-.menuchoice__restaurant-alaFrancaise:hover,
-.menuchoice__restaurant-ledélicedessens:hover
-{
-    transform: scale(1.02);
- }

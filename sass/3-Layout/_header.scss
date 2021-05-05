@@ -14,7 +14,6 @@ header {
     }
 }
 
-
 // Section Booking - Page d'accueil 
 
 .localisation {
@@ -41,6 +40,9 @@ header {
     margin: 0;
     font-size: 1.5rem;
     width: 15rem;
+    @include responsive(tablet-up) {
+        width: unset;
+    }
 }
 
 .booking__p {
@@ -71,6 +73,7 @@ header {
 .page__Secondaire-logo {
     width: 100%;
     max-width: 100%;
+    object-fit: cover;
 }
 
 .main__title {
@@ -82,6 +85,6 @@ header {
 
 .page__lanoteenchantée-logo {
     height: 16rem;
-    width: 400px;
+    width: 100%;
     object-fit: cover;
 }
