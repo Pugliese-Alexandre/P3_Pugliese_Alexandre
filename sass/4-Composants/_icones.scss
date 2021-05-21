@@ -26,12 +26,18 @@
     @include responsive(tablet-up) {
         padding-right: 0.5rem;
     }
+    @include responsive(desktop) {
+        padding-right: 1rem;
+    }
 }
 
 #footer__icone-handshake {
     padding-right: 1rem;    
     @include responsive(tablet-up) {
         padding-right: 0.5rem;
+    }
+    @include responsive(desktop) {
+        padding-right: 1rem;
     }
 }
 

@@ -34,8 +34,17 @@ footer {
         color: white;
         font-size: 1rem;
         padding-bottom: 0.5rem;
+
         @include responsive(tablet-up) {
             margin-left: 0;
+        }
+        @include responsive(tablet-down) {
+            margin: 1rem;
+            padding-bottom: 0;
+        }
+        @include responsive(desktop) {
+            padding-bottom: 0;
+            margin: 1rem;
         }
 
     }
@@ -45,8 +54,15 @@ footer {
         text-decoration: none;
         color: white;
         font-size: 1rem;
+
         @include responsive(tablet-up) {
             margin-left: 0;
+        }
+        @include responsive(tablet-down) {
+            margin: 1rem;
+        }
+        @include responsive(desktop) {
+            margin: 1rem;
         }
 
     }
@@ -60,9 +76,19 @@ footer {
         flex-direction: column;
         flex-wrap: nowrap;
     }
+
     @include responsive(tablet-down) {
         display: flex;
-        
+        padding-bottom: 0;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    @include responsive(desktop) {
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 }
 

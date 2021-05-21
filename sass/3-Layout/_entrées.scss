@@ -16,10 +16,7 @@ a {
 
 // Entrée : Page Secondaire
 
-.entrées__1,
-.entrées__2,
-.entrées__3,
-.entrées__4 {
+.entrées__menu{
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -29,6 +26,30 @@ a {
     position: relative;
     color: black;
     cursor: pointer;
+    @include responsive(tablet-zoom) {
+        max-width: 700px;
+        align-items: flex-start;
+    @include responsive(tablet-down) {
+        max-width: 900px;
+    }
+    }
+    &:hover .entrées__price {
+        transform: translateX(-100%);
+    }
+    &:hover .entrées__name, &:hover .entrées__description{
+        width: calc(100% - 90px);
+    }
+    &:hover #main__icone-check {
+        animation-name: rotation;
+        animation-duration: 1.2s;
+    }
+}
+
+.entrées {
+    @include responsive(tablet-zoom) {
+        display: table-column-group;
+    text-align: -webkit-center;
+    }
 }
 
 .entrées__price {
@@ -41,8 +62,5 @@ a {
     bottom: 0rem;
     z-index: 1;
     transition: cubic-bezier(1, 1.01, 0.01, 0.01) 1s;
-    &:hover {
-        transform: translateX(-100%);
-    }
 }
 

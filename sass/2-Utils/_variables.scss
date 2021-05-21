@@ -12,7 +12,8 @@ $primary-gradient: linear-gradient(354deg, #9356dc 20%, #ff79da 100%);
 // Breakpoints Responsive 
 
 $breakpoints: (
-    tablet-up: 700px,
+    tablet-up: 500px,
+    tablet-zoom: 700px,
     tablet-down: 900px,
     desktop: 1200px,
 );

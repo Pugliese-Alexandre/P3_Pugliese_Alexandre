@@ -6,7 +6,11 @@
 }
 
 .entrées__name, .plats__name, .desserts__name {
-    margin: 0;
+    margin: 0;  
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 1s;
 }
 
 .desserts__description,.plats__description, .entrées__description {
@@ -14,7 +18,11 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    animation: plats__description-hidden--inactive 400ms ease-out forwards;
+    width: 100%;
+    transition: 1s;
+    @include responsive(tablet-zoom) {
+        text-align: start;
+    }
 }
 
 .entrées__price, .plats__price, .desserts__price {
@@ -50,4 +58,69 @@
     position: absolute;
     top: 30px;
     left: 0px;
+}
+
+// Page Secondaire : Apparition des éléments progressivement 
+
+.vignets_1 {
+    
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari et Chrome */
+}
+.vignets_2 {
+    
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari et Chrome */
+}
+.vignets_3 {
+    
+    animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari et Chrome */
+}
+.vignets_4 {
+    
+    animation: fadein 4s;
+    -moz-animation: fadein 4s; /* Firefox */
+    -webkit-animation: fadein 4s; /* Safari et Chrome */
+}
+.vignets_5 {
+    
+    animation: fadein 5s;
+    -moz-animation: fadein 5s; /* Firefox */
+    -webkit-animation: fadein 5s; /* Safari et Chrome */
+}
+.vignets_6 {
+    
+    animation: fadein 6s;
+    -moz-animation: fadein 6s; /* Firefox */
+    -webkit-animation: fadein 6s; /* Safari et Chrome */
+}
+.vignets_7 {
+    
+    animation: fadein 7s;
+    -moz-animation: fadein 7s; /* Firefox */
+    -webkit-animation: fadein 7s; /* Safari et Chrome */
+}
+
+.vignets_8 {
+    
+    animation: fadein 8s;
+    -moz-animation: fadein 8s; /* Firefox */
+    -webkit-animation: fadein 8s; /* Safari et Chrome */
+}
+
+.vignets_9 {
+    
+    animation: fadein 9s;
+    -moz-animation: fadein 9s; /* Firefox */
+    -webkit-animation: fadein 9s; /* Safari et Chrome */
+}
+.vignets_10 {
+    
+    animation: fadein 10s;
+    -moz-animation: fadein 10s; /* Firefox */
+    -webkit-animation: fadein 10s; /* Safari et Chrome */
 }

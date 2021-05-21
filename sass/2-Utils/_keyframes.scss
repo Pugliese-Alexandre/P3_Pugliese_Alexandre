@@ -1,45 +1,85 @@
-
 // Loading Spinner Animation 
+@keyframes loader {
 
-@-webkit-keyframes spin {
+        0% {
+            z-index: 9999;
+            opacity: 1;
+        }
+        17% {
+            z-index: 9999;
+            opacity: 1;
+        }
+        24% {
+            z-index: 9999;
+            opacity: 1;
+        }
+        46% {
+            z-index: 9999;
+            opacity: 1;
+        }
+        100% {
+            z-index: -1;
+            opacity: 0;
+        }
+    }
+
+@keyframes loader__spinner {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loader__spinner {
     0% {
         -webkit-transform: rotate(0deg);
-        opacity: 1;
     }
 
     100% {
         -webkit-transform: rotate(360deg);
-        opacity: 0;
-    }
-}
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: rotate(360deg);
-        opacity: 0;
     }
 }
 
-// Page Secondaire : Taille du text "..."
+// Page Secondaire : Icone Rotation scroll
 
-@keyframes plats__description-hidden {
+@keyframes rotation {
+      
+from { 
+transform: rotate(0);
+}
+
+to {
+    transform: rotate(360deg);
+} 
+}
+
+// Page Secondaire : Apparition des éléments progressivement 
+
+
+@keyframes fadein {
     from {
-        width: calc(100% - 50px);
+        opacity:0;
     }
     to {
-        width: calc(100% - 100px);
+        opacity:1;
     }
 }
-
-@keyframes plats__description-hidden--inactive {
+@-moz-keyframes fadein { /* sur Firefox */
     from {
-        width: calc(100% - 100px);
+        opacity:0;
     }
     to {
-        width: calc(100% - 50px);
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
     }
 }

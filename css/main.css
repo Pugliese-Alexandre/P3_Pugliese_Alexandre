@@ -67,40 +67,108 @@ body {
   font-weight: 400;
 }
 
-@-webkit-keyframes spin {
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loader 3000ms forwards;
+}
+
+.loader__spinner {
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-top: 10px solid #FF79DA;
+  border-bottom: 10px solid #9356DC;
+  border-radius: 50%;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: loader__spinner 1000ms linear 3;
+  -moz-animation: loader__spinner 1000ms linear 3;
+  -o-animation: loader__spinner 1000ms linear 3;
+  animation: loader__spinner 1000ms linear 3;
+}
+
+@keyframes loader {
+  0% {
+    z-index: 9999;
+    opacity: 1;
+  }
+  17% {
+    z-index: 9999;
+    opacity: 1;
+  }
+  24% {
+    z-index: 9999;
+    opacity: 1;
+  }
+  46% {
+    z-index: 9999;
+    opacity: 1;
+  }
+  100% {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+@keyframes loader__spinner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loader__spinner {
   0% {
     -webkit-transform: rotate(0deg);
-    opacity: 1;
   }
   100% {
     -webkit-transform: rotate(360deg);
-    opacity: 0;
   }
 }
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
-  100% {
-    transform: rotate(360deg);
+}
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
     opacity: 0;
   }
-}
-@keyframes plats__description-hidden {
-  from {
-    width: calc(100% - 50px);
-  }
   to {
-    width: calc(100% - 100px);
+    opacity: 1;
   }
 }
-@keyframes plats__description-hidden--inactive {
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
   from {
-    width: calc(100% - 100px);
+    opacity: 0;
   }
   to {
-    width: calc(100% - 50px);
+    opacity: 1;
   }
 }
 body {
@@ -116,6 +184,10 @@ header {
 header .logo {
   width: 10rem;
   padding-left: 2rem;
+}
+
+.container__body-color {
+  background-color: #EDEDED;
 }
 
 .localisation {
@@ -176,10 +248,25 @@ header .logo {
   max-width: 100%;
   object-fit: cover;
 }
+@media screen and (min-width: 700px) {
+  .page__Secondaire-logo {
+    height: 20rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .page__Secondaire-logo {
+    height: 20rem;
+  }
+}
 
 .main__title {
   display: flex;
   font-size: 2rem;
+}
+@media screen and (min-width: 700px) {
+  .main__title {
+    align-self: center;
+  }
 }
 
 .page__lanoteenchantée-logo {
@@ -217,12 +304,13 @@ header .logo {
 }
 .menuNav .menuNav__Btn-number {
   color: white;
-  padding: 3px;
-  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
   background-color: #9356DC;
   border: none;
   position: absolute;
-  left: -7px;
+  left: -10px;
 }
 
 .menuNav__button-taste:hover,
@@ -365,6 +453,18 @@ footer .footer__Link {
     margin-left: 0;
   }
 }
+@media screen and (min-width: 900px) {
+  footer .footer__Link {
+    margin: 1rem;
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer .footer__Link {
+    padding-bottom: 0;
+    margin: 1rem;
+  }
+}
 footer .footer__Contact {
   margin-left: 3rem;
   text-decoration: none;
@@ -374,6 +474,16 @@ footer .footer__Contact {
 @media screen and (min-width: 500px) {
   footer .footer__Contact {
     margin-left: 0;
+  }
+}
+@media screen and (min-width: 900px) {
+  footer .footer__Contact {
+    margin: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer .footer__Contact {
+    margin: 1rem;
   }
 }
 
@@ -389,6 +499,17 @@ footer .footer__Contact {
 @media screen and (min-width: 900px) {
   .footer__content {
     display: flex;
+    padding-bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__content {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
@@ -411,10 +532,7 @@ a {
   top: -3rem;
 }
 
-.entrées__1,
-.entrées__2,
-.entrées__3,
-.entrées__4 {
+.entrées__menu {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -424,6 +542,34 @@ a {
   position: relative;
   color: black;
   cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .entrées__menu {
+    max-width: 700px;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 700px) and (min-width: 900px) {
+  .entrées__menu {
+    max-width: 900px;
+  }
+}
+.entrées__menu:hover .entrées__price {
+  transform: translateX(-100%);
+}
+.entrées__menu:hover .entrées__name, .entrées__menu:hover .entrées__description {
+  width: calc(100% - 90px);
+}
+.entrées__menu:hover #main__icone-check {
+  animation-name: rotation;
+  animation-duration: 1.2s;
+}
+
+@media screen and (min-width: 700px) {
+  .entrées {
+    display: table-column-group;
+    text-align: -webkit-center;
+  }
 }
 
 .entrées__price {
@@ -437,11 +583,15 @@ a {
   z-index: 1;
   transition: cubic-bezier(1, 1.01, 0.01, 0.01) 1s;
 }
-.entrées__price:hover {
-  transform: translateX(-100%);
+
+@media screen and (min-width: 700px) {
+  .plats {
+    display: table-column-group;
+    text-align: -webkit-center;
+  }
 }
 
-.plats__1, .plats__2, .plats__3 {
+.plats__menu {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -451,6 +601,27 @@ a {
   position: relative;
   color: black;
   cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .plats__menu {
+    max-width: 700px;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 700px) and (min-width: 900px) {
+  .plats__menu {
+    max-width: 900px;
+  }
+}
+.plats__menu:hover .plats__price {
+  transform: translateX(-100%);
+}
+.plats__menu:hover .plats__name, .plats__menu:hover .plats__description {
+  width: calc(100% - 90px);
+}
+.plats__menu:hover #main__icone-check {
+  animation-name: rotation;
+  animation-duration: 1.2s;
 }
 
 .plats__price {
@@ -464,11 +635,15 @@ a {
   z-index: 1;
   transition: cubic-bezier(1, 1.01, 0.01, 0.01) 1s;
 }
-.plats__price:hover {
-  transform: translateX(-100%);
+
+@media screen and (min-width: 700px) {
+  .desserts {
+    display: table-column-group;
+    text-align: -webkit-center;
+  }
 }
 
-.desserts__1, .desserts__2, .desserts__3 {
+.desserts__menu {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -478,6 +653,27 @@ a {
   position: relative;
   color: black;
   cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .desserts__menu {
+    max-width: 700px;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 700px) and (min-width: 900px) {
+  .desserts__menu {
+    max-width: 900px;
+  }
+}
+.desserts__menu:hover .desserts__price {
+  transform: translateX(-100%);
+}
+.desserts__menu:hover .desserts__name, .desserts__menu:hover .desserts__description {
+  width: calc(100% - 90px);
+}
+.desserts__menu:hover #main__icone-check {
+  animation-name: rotation;
+  animation-duration: 1.2s;
 }
 
 .desserts__price {
@@ -491,9 +687,6 @@ a {
   z-index: 1;
   transition: cubic-bezier(1, 1.01, 0.01, 0.01) 1s;
 }
-.desserts__price:hover {
-  transform: translateX(-100%);
-}
 
 .plats__title, .entrées__title, .desserts__title {
   font-size: 1rem;
@@ -502,6 +695,10 @@ a {
 
 .entrées__name, .plats__name, .desserts__name {
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 1s;
 }
 
 .desserts__description, .plats__description, .entrées__description {
@@ -509,7 +706,13 @@ a {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  animation: plats__description-hidden--inactive 400ms ease-out forwards;
+  width: 100%;
+  transition: 1s;
+}
+@media screen and (min-width: 700px) {
+  .desserts__description, .plats__description, .entrées__description {
+    text-align: start;
+  }
 }
 
 .entrées__price, .plats__price, .desserts__price {
@@ -547,25 +750,84 @@ a {
   left: 0px;
 }
 
-/* Loading Bouton*/
-.chargement {
-  width: 100px;
-  height: 100px;
-  border: 10px solid transparent;
-  border-top: 10px solid #FF79DA;
-  border-bottom: 10px solid #9356DC;
-  border-radius: 50%;
-  margin: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-animation: spin 3s ease-in-out 0.1s forwards;
-  -moz-animation: spin 3s ease-in-out 0.1s forwards;
-  -o-animation: spin 3s ease-in-out 0.1s forwards;
-  animation: spin 3s ease-in-out 0.1s forwards;
-  z-index: 3;
+.vignets_1 {
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
+  /* Firefox */
+  -webkit-animation: fadein 1s;
+  /* Safari et Chrome */
+}
+
+.vignets_2 {
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -webkit-animation: fadein 2s;
+  /* Safari et Chrome */
+}
+
+.vignets_3 {
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  /* Firefox */
+  -webkit-animation: fadein 3s;
+  /* Safari et Chrome */
+}
+
+.vignets_4 {
+  animation: fadein 4s;
+  -moz-animation: fadein 4s;
+  /* Firefox */
+  -webkit-animation: fadein 4s;
+  /* Safari et Chrome */
+}
+
+.vignets_5 {
+  animation: fadein 5s;
+  -moz-animation: fadein 5s;
+  /* Firefox */
+  -webkit-animation: fadein 5s;
+  /* Safari et Chrome */
+}
+
+.vignets_6 {
+  animation: fadein 6s;
+  -moz-animation: fadein 6s;
+  /* Firefox */
+  -webkit-animation: fadein 6s;
+  /* Safari et Chrome */
+}
+
+.vignets_7 {
+  animation: fadein 7s;
+  -moz-animation: fadein 7s;
+  /* Firefox */
+  -webkit-animation: fadein 7s;
+  /* Safari et Chrome */
+}
+
+.vignets_8 {
+  animation: fadein 8s;
+  -moz-animation: fadein 8s;
+  /* Firefox */
+  -webkit-animation: fadein 8s;
+  /* Safari et Chrome */
+}
+
+.vignets_9 {
+  animation: fadein 9s;
+  -moz-animation: fadein 9s;
+  /* Firefox */
+  -webkit-animation: fadein 9s;
+  /* Safari et Chrome */
+}
+
+.vignets_10 {
+  animation: fadein 10s;
+  -moz-animation: fadein 10s;
+  /* Firefox */
+  -webkit-animation: fadein 10s;
+  /* Safari et Chrome */
 }
 
 .booking__button {
@@ -619,7 +881,7 @@ a {
   border-radius: 3rem;
   align-self: center;
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   cursor: pointer;
 }
 .commander-Btn:hover {
@@ -653,6 +915,11 @@ a {
     padding-right: 0.5rem;
   }
 }
+@media screen and (min-width: 1200px) {
+  #footer__icone-utensils {
+    padding-right: 1rem;
+  }
+}
 
 #footer__icone-handshake {
   padding-right: 1rem;
@@ -660,6 +927,11 @@ a {
 @media screen and (min-width: 500px) {
   #footer__icone-handshake {
     padding-right: 0.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #footer__icone-handshake {
+    padding-right: 1rem;
   }
 }
 

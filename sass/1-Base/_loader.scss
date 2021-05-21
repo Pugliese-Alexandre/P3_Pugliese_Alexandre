@@ -1,0 +1,33 @@
+// Loading Bouton
+
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loader 3000ms forwards;
+}
+
+.loader__spinner {
+    width: 100px;
+    height: 100px;
+    border: 10px solid transparent;
+    border-top: 10px solid #FF79DA;
+    border-bottom: 10px solid #9356DC;
+    border-radius: 50%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-animation: loader__spinner 1000ms linear 3;
+    -moz-animation: loader__spinner 1000ms linear 3;
+    -o-animation: loader__spinner 1000ms linear 3;
+    animation: loader__spinner 1000ms linear 3;
+}

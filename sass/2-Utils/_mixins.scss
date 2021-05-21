@@ -4,22 +4,16 @@
     background-color: darken($lightgrey, 5%);
 }
 
-// Éclaircissement Couleur Bouton 
-
-@mixin opacity {
-    opacity: .85;
-}
-
-@mixin bouton-lighten {
-    box-shadow: lighten($primary-gradient, 5%);
-}
-
 // Responsive 
 
 @mixin responsive($breakpoints) {
 
     @if $breakpoints == tablet-up {
         @media screen and (min-width: 500px){@content;}
+    }
+
+    @if $breakpoints == tablet-zoom {
+        @media screen and (min-width: 700px){@content;}
     }
 
     @if $breakpoints == tablet-down {

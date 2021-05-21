@@ -14,6 +14,10 @@ header {
     }
 }
 
+.container__body-color {
+    background-color: $lightgrey;
+}
+
 // Section Booking - Page d'accueil 
 
 .localisation {
@@ -74,11 +78,20 @@ header {
     width: 100%;
     max-width: 100%;
     object-fit: cover;
+    @include responsive(tablet-zoom) {
+        height: 20rem;
+    }
+    @include responsive(tablet-down) {
+        height: 20rem;
+    }
 }
 
 .main__title {
     display: flex;
     font-size: 2rem;
+    @include responsive(tablet-zoom) {
+        align-self: center;
+    }
 }
 
 // Logo : Page Secondaire : La note enchantée

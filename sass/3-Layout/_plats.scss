@@ -1,16 +1,43 @@
 // Plats  : Page Secondaire
+.plats {
+    @include responsive(tablet-zoom) {
+        display: table-column-group;
+        text-align: -webkit-center;
+    }
+}
 
-.plats__1, .plats__2, .plats__3 {
+.plats__menu {
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 1rem;
     padding: 1rem;
     margin: 1rem 1rem 1rem 0rem;
-    position: relative; 
+    position: relative;
     color: black;
     cursor: pointer;
+
+    @include responsive(tablet-zoom) {
+        max-width: 700px;
+        align-items: flex-start;
+
+    @include responsive(tablet-down) {
+        max-width: 900px;
+        }
     }
+    &:hover .plats__price {
+        transform: translateX(-100%);
+    }
+    &:hover .plats__name, &:hover .plats__description{
+        width: calc(100% - 90px);
+    }
+    &:hover #main__icone-check {
+        animation-name: rotation;
+        animation-duration: 1.2s;
+    }
+}
+
+
 
 .plats__price {
     background-color: white;
@@ -22,8 +49,4 @@
     bottom: 0rem;
     z-index: 1;
     transition: cubic-bezier(1, 1.01, 0.01, 0.01) 1s;
-    &:hover {
-        transform: translateX(-100%);
-    }
 }
-

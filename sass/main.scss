@@ -1,5 +1,6 @@
 // 1 - BASE 
 @import '1-Base/_typography';
+@import '1-Base/_loader';
 
 // 2 - UTILS 
 @import '2-Utils/_fonctions';
@@ -13,7 +14,6 @@
 @import '3-Layout/_restaurants';
 @import '3-Layout/_footer';
 @import '3-Layout/_entrées';
-@import '3-Layout/_mediaQueries';
 @import '3-Layout/_plats';
 @import '3-Layout/_désserts';
 @import '3-Layout/_lestroismenu';
