@@ -12,6 +12,14 @@
     color: #6E6E6E;
 }
 
+#menuNav__icone1-1 {
+    padding-right: 2rem;
+    font-size: 1rem;
+    padding-left: 2rem;
+    color: #6E6E6E;
+}
+
+
 #menuNav__icone2 {
     padding-right: 2rem;
     color: $color-primary;
@@ -42,7 +50,7 @@
 }
 
 // Icones : Restaurant : Coeur
-#menuChoice__icone-love {
+#menuChoice__icone-love-1,#menuChoice__icone-love-2,#menuChoice__icone-love-3,#menuChoice__icone-love-4 {
     font-size: 1.1rem;
     position: absolute;
     top: 1.6rem;
@@ -94,7 +102,7 @@
 
 // Icones : Page Secondaire : Check
 
-#main__icone-check {
+.main__icone-check {
     display: flex;
     color: white;
     justify-content: center;
@@ -102,4 +110,7 @@
     margin-top: 1.5rem;
     border: none;
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 10px;
 }

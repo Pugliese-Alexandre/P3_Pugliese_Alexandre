@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto";
@@ -27,17 +26,17 @@ body {
   font-weight: 400;
 }
 
-.plats__title, .entrées__title, .desserts__title {
+.plats__title, .entrees__title, .desserts__title {
   font-family: "Roboto";
   font-weight: 400;
 }
 
-.entrées__name {
+.entrees__name {
   font-family: "Roboto";
   font-weight: 700;
 }
 
-.entrées__price {
+.entrees__price {
   font-family: "Roboto";
   font-weight: 700;
 }
@@ -62,7 +61,7 @@ body {
   font-weight: 700;
 }
 
-.desserts__description, .plats__description, .entrées__description {
+.desserts__description, .plats__description, .entrees__description {
   font-family: "Roboto";
   font-weight: 400;
 }
@@ -269,7 +268,7 @@ header .logo {
   }
 }
 
-.page__lanoteenchantée-logo {
+.page__lanoteenchantee-logo {
   height: 16rem;
   width: 100%;
   object-fit: cover;
@@ -532,7 +531,7 @@ a {
   top: -3rem;
 }
 
-.entrées__menu {
+.entrees__menu {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -544,35 +543,35 @@ a {
   cursor: pointer;
 }
 @media screen and (min-width: 700px) {
-  .entrées__menu {
+  .entrees__menu {
     max-width: 700px;
     align-items: flex-start;
   }
 }
 @media screen and (min-width: 700px) and (min-width: 900px) {
-  .entrées__menu {
+  .entrees__menu {
     max-width: 900px;
   }
 }
-.entrées__menu:hover .entrées__price {
+.entrees__menu:hover .entrees__price {
   transform: translateX(-100%);
 }
-.entrées__menu:hover .entrées__name, .entrées__menu:hover .entrées__description {
+.entrees__menu:hover .entrees__name, .entrees__menu:hover .entrees__description {
   width: calc(100% - 90px);
 }
-.entrées__menu:hover #main__icone-check {
+.entrees__menu:hover .main__icone-check {
   animation-name: rotation;
   animation-duration: 1.2s;
 }
 
 @media screen and (min-width: 700px) {
-  .entrées {
+  .entrees {
     display: table-column-group;
     text-align: -webkit-center;
   }
 }
 
-.entrées__price {
+.entrees__price {
   background-color: white;
   width: 48px;
   height: 74px;
@@ -619,7 +618,7 @@ a {
 .plats__menu:hover .plats__name, .plats__menu:hover .plats__description {
   width: calc(100% - 90px);
 }
-.plats__menu:hover #main__icone-check {
+.plats__menu:hover .main__icone-check {
   animation-name: rotation;
   animation-duration: 1.2s;
 }
@@ -671,7 +670,7 @@ a {
 .desserts__menu:hover .desserts__name, .desserts__menu:hover .desserts__description {
   width: calc(100% - 90px);
 }
-.desserts__menu:hover #main__icone-check {
+.desserts__menu:hover .main__icone-check {
   animation-name: rotation;
   animation-duration: 1.2s;
 }
@@ -688,12 +687,12 @@ a {
   transition: cubic-bezier(1, 1.01, 0.01, 0.01) 1s;
 }
 
-.plats__title, .entrées__title, .desserts__title {
+.plats__title, .entrees__title, .desserts__title {
   font-size: 1rem;
   text-transform: uppercase;
 }
 
-.entrées__name, .plats__name, .desserts__name {
+.entrees__name, .plats__name, .desserts__name {
   margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -701,7 +700,7 @@ a {
   transition: 1s;
 }
 
-.desserts__description, .plats__description, .entrées__description {
+.desserts__description, .plats__description, .entrees__description {
   margin: 0;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -710,12 +709,12 @@ a {
   transition: 1s;
 }
 @media screen and (min-width: 700px) {
-  .desserts__description, .plats__description, .entrées__description {
+  .desserts__description, .plats__description, .entrees__description {
     text-align: start;
   }
 }
 
-.entrées__price, .plats__price, .desserts__price {
+.entrees__price, .plats__price, .desserts__price {
   margin: 0;
 }
 
@@ -900,6 +899,13 @@ a {
   color: #6E6E6E;
 }
 
+#menuNav__icone1-1 {
+  padding-right: 2rem;
+  font-size: 1rem;
+  padding-left: 2rem;
+  color: #6E6E6E;
+}
+
 #menuNav__icone2 {
   padding-right: 2rem;
   color: #9356DC;
@@ -935,13 +941,13 @@ a {
   }
 }
 
-#menuChoice__icone-love {
+#menuChoice__icone-love-1, #menuChoice__icone-love-2, #menuChoice__icone-love-3, #menuChoice__icone-love-4 {
   font-size: 1.1rem;
   position: absolute;
   top: 1.6rem;
   right: 3rem;
 }
-#menuChoice__icone-love:hover {
+#menuChoice__icone-love-1:hover, #menuChoice__icone-love-2:hover, #menuChoice__icone-love-3:hover, #menuChoice__icone-love-4:hover {
   font-weight: 900;
   animation: fill 0.3s ease-in-out;
   opacity: 1;
@@ -979,7 +985,7 @@ a {
   -webkit-background-clip: text;
 }
 
-#main__icone-check {
+.main__icone-check {
   display: flex;
   color: white;
   justify-content: center;
@@ -987,6 +993,9 @@ a {
   margin-top: 1.5rem;
   border: none;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -16,7 +16,7 @@ a {
 
 // Entrée : Page Secondaire
 
-.entrées__menu{
+.entrees__menu{
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -33,26 +33,26 @@ a {
         max-width: 900px;
     }
     }
-    &:hover .entrées__price {
+    &:hover .entrees__price {
         transform: translateX(-100%);
     }
-    &:hover .entrées__name, &:hover .entrées__description{
+    &:hover .entrees__name, &:hover .entrees__description{
         width: calc(100% - 90px);
     }
-    &:hover #main__icone-check {
+    &:hover .main__icone-check {
         animation-name: rotation;
         animation-duration: 1.2s;
     }
 }
 
-.entrées {
+.entrees {
     @include responsive(tablet-zoom) {
         display: table-column-group;
     text-align: -webkit-center;
     }
 }
 
-.entrées__price {
+.entrees__price {
     background-color: white;
     width: 48px;
     height: 74px;

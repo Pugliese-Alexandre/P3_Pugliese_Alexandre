@@ -33,7 +33,7 @@
     &:hover .desserts__name, &:hover .desserts__description{
         width: calc(100% - 90px);
     }
-    &:hover #main__icone-check {
+    &:hover .main__icone-check {
         animation-name: rotation;
         animation-duration: 1.2s;
     }
