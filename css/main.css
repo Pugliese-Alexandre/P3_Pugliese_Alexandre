@@ -845,7 +845,7 @@ a {
 
 .booking__button {
   display: inline-block;
-  width: 13rem;
+  width: 12rem;
   font-weight: 700;
   height: 3rem;
   background: linear-gradient(354deg, #9356dc 20%, #ff79da 100%);
@@ -858,6 +858,7 @@ a {
   margin-top: 2rem;
   cursor: pointer;
   transition-duration: 0.3s;
+  font-size: 12px;
 }
 .booking__button:hover {
   opacity: 0.85;
