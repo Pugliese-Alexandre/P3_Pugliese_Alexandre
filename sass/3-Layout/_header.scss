@@ -30,6 +30,19 @@ header {
     @include heading-shadow
 }
 
+.booking__localisation {
+    width: 8rem;
+    color: #000000;
+    border: none;
+    font-size: 1rem;
+    @include heading-shadow
+}
+
+input::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
 .booking__container {
     display: flex;
     align-items: center;
@@ -44,6 +57,7 @@ header {
     margin: 0;
     font-size: 1.5rem;
     width: 15rem;
+
     @include responsive(tablet-up) {
         width: unset;
     }
@@ -78,9 +92,11 @@ header {
     width: 100%;
     max-width: 100%;
     object-fit: cover;
+
     @include responsive(tablet-zoom) {
         height: 20rem;
     }
+
     @include responsive(tablet-down) {
         height: 20rem;
     }
@@ -89,6 +105,7 @@ header {
 .main__title {
     display: flex;
     font-size: 2rem;
+
     @include responsive(tablet-zoom) {
         align-self: center;
     }

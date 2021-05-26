@@ -4,6 +4,10 @@
     background-color: darken($lightgrey, 5%);
 }
 
+@mixin bouton-lighten {
+    background-color: lighten($color-primary, 34%);
+}
+
 // Responsive 
 
 @mixin responsive($breakpoints) {
